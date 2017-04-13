@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MusicLibraryService.Services;
+
+namespace MusicLibraryService.Logics
+{
+    public class TrackSearcher:IDisposable
+    {
+        private readonly ITrackOperationService _service;
+
+        private Task _trackSearcherTask;
+
+        public TrackSearcher(ITrackOperationService service)
+        {
+            _service = service;
+        }
+
+        public void Dispose()
+        {
+            if (_trackSearcherTask!=null)
+                _trackSearcherTask.Dispose();
+        }
+
+        public Task RunLogic()
+        {
+            _trackSearcherTask = Task.Delay(0).ContinueWith(t => SearchTracks());
+            return _trackSearcherTask;
+        }
+
+        private void SearchTracks()
+        {
+            _service.SearchTracks();
+
+            Task.Delay(new TimeSpan(0, 0, 20)).ContinueWith(t => SearchTracks()).Wait();
+        }
+    }
+}

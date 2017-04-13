@@ -1,0 +1,14 @@
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\DataHelper.dll
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\MusicLibraryService.exe
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\EntityFramework.dll
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\Ninject.dll
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\DataHelper.pdb
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\MusicLibraryService.pdb
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\EntityFramework.xml
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\Ninject.xml
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config

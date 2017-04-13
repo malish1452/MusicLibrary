@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicLibrary.API", "MusicLibrary\MusicLibrary.API.csproj", "{800AF4B9-C01E-4BB1-AD93-BF4F293616A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{496A558C-40F6-43FD-9A91-F065A2F9F73B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicLibraryService", "MusicLibraryService\MusicLibraryService.csproj", "{2A071E19-8671-4C2C-BE4E-DAE744E868AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{37BA3B07-09BA-450D-B4B0-E3A218D78E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{58BABA04-01C1-4E11-B5A7-3A69ABDA050C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7FF74F51-32DB-4738-9562-184E982CE1CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataHelper", "DataHelper\DataHelper.csproj", "{9002C68C-8FE1-400A-9262-6674EBFAD6CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{800AF4B9-C01E-4BB1-AD93-BF4F293616A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800AF4B9-C01E-4BB1-AD93-BF4F293616A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800AF4B9-C01E-4BB1-AD93-BF4F293616A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800AF4B9-C01E-4BB1-AD93-BF4F293616A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A071E19-8671-4C2C-BE4E-DAE744E868AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A071E19-8671-4C2C-BE4E-DAE744E868AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A071E19-8671-4C2C-BE4E-DAE744E868AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A071E19-8671-4C2C-BE4E-DAE744E868AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58BABA04-01C1-4E11-B5A7-3A69ABDA050C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BABA04-01C1-4E11-B5A7-3A69ABDA050C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BABA04-01C1-4E11-B5A7-3A69ABDA050C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BABA04-01C1-4E11-B5A7-3A69ABDA050C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9002C68C-8FE1-400A-9262-6674EBFAD6CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9002C68C-8FE1-400A-9262-6674EBFAD6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9002C68C-8FE1-400A-9262-6674EBFAD6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9002C68C-8FE1-400A-9262-6674EBFAD6CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58BABA04-01C1-4E11-B5A7-3A69ABDA050C} = {37BA3B07-09BA-450D-B4B0-E3A218D78E42}
+		{9002C68C-8FE1-400A-9262-6674EBFAD6CB} = {7FF74F51-32DB-4738-9562-184E982CE1CB}
+	EndGlobalSection
+EndGlobal
