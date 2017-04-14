@@ -8,3 +8,14 @@ C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\DataHel
 C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\DataHelper\obj\Debug\DataHelper.dll
 C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\DataHelper\obj\Debug\DataHelper.pdb
 C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\DataHelper\obj\Debug\DataHelper.csprojResolveAssemblyReference.cache
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\DataHelper.dll.config
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\DataHelper.dll
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\DataHelper.pdb
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\EntityFramework.dll
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\Ninject.dll
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\EntityFramework.xml
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\GIT\MusicLibrary\DataHelper\bin\Debug\Ninject.xml
+C:\Projects\GIT\MusicLibrary\DataHelper\obj\Debug\DataHelper.dll
+C:\Projects\GIT\MusicLibrary\DataHelper\obj\Debug\DataHelper.pdb

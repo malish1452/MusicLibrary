@@ -12,3 +12,21 @@ C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTes
 C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
 C:\Users\kirpichnikov\documents\visual studio 2013\Projects\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\DataHelper.dll
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\MusicLibraryService.exe
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\Ninject.dll
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\EntityFramework.dll
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\DataHelper.pdb
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\DataHelper.dll.config
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\MusicLibraryService.pdb
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\MusicLibraryService.exe.config
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\Ninject.xml
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\EntityFramework.xml
+C:\Projects\GIT\MusicLibrary\UnitTestProject1\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll

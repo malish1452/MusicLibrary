@@ -25,11 +25,11 @@ namespace MusicLibraryService.Logics
 
         public void StartProcess()
         {
-            //_playlistMonitor = NinjectHelper.Get<PlaylistMonitor>();
-            //_playlistMonitor.RunLogic().Wait();
+            _playlistMonitor = NinjectHelper.Get<PlaylistMonitor>();
+            _playlistMonitor.RunLogic().Wait();
 
-            //_stationLoader = NinjectHelper.Get<StationLoader>();
-            //_stationLoader.RunLogic().Wait();
+            _stationLoader = NinjectHelper.Get<StationLoader>();
+            _stationLoader.RunLogic().Wait();
 
             _mixedNamesParser = NinjectHelper.Get<MixedNamesParser>();
             _mixedNamesParser.RunLogic().Wait();
