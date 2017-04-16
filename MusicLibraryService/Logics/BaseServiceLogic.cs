@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataHelper.DBWork;
 using MusicLibraryService.Data;
-
+using System.Configuration;
 
 namespace MusicLibraryService.Logics
 {
@@ -15,6 +15,7 @@ namespace MusicLibraryService.Logics
         private PlaylistMonitor _playlistMonitor;
         private StationLoader _stationLoader;
         private MixedNamesParser _mixedNamesParser;
+        private TrackSearcher _trackSearcher;
 
         public void Dispose()
         {
@@ -26,17 +27,23 @@ namespace MusicLibraryService.Logics
         public void StartProcess()
         {
             _playlistMonitor = NinjectHelper.Get<PlaylistMonitor>();
-            _playlistMonitor.RunLogic().Wait();
+            _playlistMonitor.RunLogic();
 
             _stationLoader = NinjectHelper.Get<StationLoader>();
-            _stationLoader.RunLogic().Wait();
+            _stationLoader.RunLogic();
 
-            _mixedNamesParser = NinjectHelper.Get<MixedNamesParser>();
-            _mixedNamesParser.RunLogic().Wait();
+           _mixedNamesParser = NinjectHelper.Get<MixedNamesParser>();
+           _mixedNamesParser.RunLogic();
+
+            
+            _trackSearcher = NinjectHelper.Get<TrackSearcher>();
+
+            _trackSearcher.RunLogic();
 
 
 
 
         }
+        
     }
 }

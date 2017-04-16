@@ -43,25 +43,80 @@ namespace MusicLibraryService.Services
             {
                 SearchSingleTrack(track);
             }
+
+            Db.Save();
             
         }
 
         public void SearchSingleTrack(Track track)
         {
-            string url = String.Format("https://www.mp3poisk.me/search{0}", WebUtility.UrlEncode(track.MixedName));
+            string url = String.Format("https://www.mp3poisk.me/search/{0}", WebUtility.UrlEncode(track.MixedName));
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-
-            WebResponse response;
+            request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";
+            request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+            request.Headers.Add(HttpRequestHeader.AcceptLanguage, "ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4");
+            request.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip, deflate, sdch, br");
+            request.Connection = "Alive";
+            HttpWebResponse response;
             try
             {
-                response = request.GetResponse();
+
+                response = request.GetResponse() as HttpWebResponse;
+
+            }
+            catch (WebException ex)
+            {
+                response = ex.Response as HttpWebResponse;
+
             }
             catch (Exception ex)
             {
+                track.StatusId = (int)TrackStatusEnum.Нераспознан;
                 return;
             }
+
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                track.StatusId = (int)TrackStatusEnum.Нераспознан;
+                return;
+            }
+
+
+
+            Stream httpStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(httpStream, Encoding.UTF8);
+            string result = reader.ReadToEnd();
+            if (result.IndexOf("<li itemprop=\"track\"") < 0)
+            {
+                return;
+            }
+            result = result.Substring(result.IndexOf("<li itemprop=\"track\"") - 1);
+
+            while ((result.IndexOf("<li itemprop=\"track\"") > 0) && (track.StatusId != (int)TrackStatusEnum.Скачан))
+            {
+                string substring = result.Substring(0, result.IndexOf("</li>"));
+                int index = substring.IndexOf("<span class=\"bitrait hide-on-small-mobile\"><strong>");
+                int bitrate;
+                if (index > 0)
+                {
+                    bool res = int.TryParse(substring.Substring(index + 51, 4).Trim(), out bitrate);
+                    if (!res) { bitrate = 0; }
+                    if (bitrate == 320)
+                    {
+                        substring = substring.Substring(substring.IndexOf("content =") + 10);
+                        string adress = substring.Substring(0, substring.IndexOf("\""));
+                        WebClient DownLoader = new WebClient();                         
+                        DownLoader.DownloadFile(adress, Path.Combine(@"C:\MusicLibrary\", String.Format("{0}.{1}.mp3", track.Id, track.MixedName.Replace("#","").Replace("*", "").Replace("|", ""))));
+
+                        track.StatusId = (int)TrackStatusEnum.Скачан;
+                    }
+                }
+                result = result.Substring(result.IndexOf("</li>") + 5);
+            }
+            if (track.StatusId != (int)TrackStatusEnum.Скачан)
+            { track.StatusId = (int)TrackStatusEnum.Нераспознан; }
 
         }
 
@@ -174,10 +229,11 @@ namespace MusicLibraryService.Services
         public void ParseSingleMixedName(Track track)
 
         {
-            string url = String.Format("https://yandex.com/search/xml?user=kirpichnikov-ro&key=03.431424486:f54dbc8d2b13cdb8d5576f9534edc84e&query={0}&l10n=en&sortby=rlv&filter=none&groupby=attr%3D%22%22.mode%3Dflat.groups-on-page%3D29.docs-in-group%3D1",WebUtility.UrlEncode(track.MixedName));
+            string url = String.Format("http://192.168.0.69/yandexproxy/api/values?SearchString={0}", WebUtility.UrlEncode(track.MixedName));
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
+            request.ContentType = "aplication/text";
 
             WebResponse response;
             try
@@ -191,6 +247,7 @@ namespace MusicLibraryService.Services
             Stream httpStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(httpStream, Encoding.UTF8);
             string result = reader.ReadToEnd();
+            result=result.Replace("\\\"","\"").Replace("\\r","").Replace("\\n","").Trim('"');
 
             List<String> searchResultTitles = new List<string>();
 

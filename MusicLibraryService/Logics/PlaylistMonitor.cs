@@ -27,12 +27,12 @@ namespace MusicLibraryService.Logics
                 _playlisMonitorTask.Dispose();
         }
 
-        public Task RunLogic()
+        public void RunLogic()
         {
 
             _playlisMonitorTask = Task.Delay(0)
                 .ContinueWith(t => MonitorPlaylist());
-            return _playlisMonitorTask;
+           
         }
 
         private void MonitorPlaylist()

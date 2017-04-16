@@ -24,12 +24,12 @@ namespace MusicLibraryService.Logics
                 _statioLoaderTask.Dispose();
         }
 
-        public Task RunLogic()
+        public void RunLogic()
         {
 
             _statioLoaderTask = Task.Delay(0)
                 .ContinueWith(t => LoadStations());
-            return _statioLoaderTask;
+            
         }
 
         private void LoadStations()

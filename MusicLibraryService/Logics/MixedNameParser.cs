@@ -23,12 +23,11 @@ namespace MusicLibraryService.Logics
             if (_mixedNameParserTask != null)
                 _mixedNameParserTask.Dispose();
         }
-
-        public Task RunLogic()
+        public void RunLogic()
         {
 
             _mixedNameParserTask = Task.Delay(0).ContinueWith(t => ParseMixedNames());
-          return _mixedNameParserTask;
+          //return _mixedNameParserTask;
         }
 
         private void ParseMixedNames()
@@ -41,7 +40,7 @@ namespace MusicLibraryService.Logics
             {
 
             }
-            Task.Delay(new TimeSpan(0,1,0)).ContinueWith(t => ParseMixedNames()).Wait();
+            Task.Delay(new TimeSpan(0,0,0)).ContinueWith(t => ParseMixedNames());
         }
     }
 }

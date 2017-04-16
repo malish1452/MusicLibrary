@@ -24,17 +24,21 @@ namespace MusicLibraryService.Logics
                 _trackSearcherTask.Dispose();
         }
 
-        public Task RunLogic()
+        public void Start()
         {
             _trackSearcherTask = Task.Delay(0).ContinueWith(t => SearchTracks());
-            return _trackSearcherTask;
+        }
+        public void  RunLogic()
+        {
+            _trackSearcherTask = Task.Delay(0).ContinueWith(t => SearchTracks());
+           //return _trackSearcherTask;
         }
 
         private void SearchTracks()
         {
             _service.SearchTracks();
 
-            Task.Delay(new TimeSpan(0, 0, 20)).ContinueWith(t => SearchTracks()).Wait();
+            Task.Delay(new TimeSpan(0, 0, 5)).ContinueWith(t => SearchTracks()).Wait();
         }
     }
 }
